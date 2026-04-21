@@ -1,0 +1,10 @@
+FROM openjdk:17
+
+WORKDIR /app
+
+COPY target/employee-api.jar app.jar
+
+EXPOSE 9231
+
+ENTRYPOINT ["java", "-jar", "app.jar"]
+
